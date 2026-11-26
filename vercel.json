@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/site/index.html" },
+    { "source": "/assets/:path*", "destination": "/site/assets/:path*" },
+    { "source": "/campuses/:path*", "destination": "/site/campuses/:path*" },
+    { "source": "/:page.html", "destination": "/site/:page.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

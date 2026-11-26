@@ -1,0 +1,37 @@
+{
+  "pages": 21,
+  "results": [
+    {
+      "file": "index.html",
+      "width": 1280,
+      "lang": "ru",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 390,
+      "lang": "ru",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 360,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "campuses/domodedovskaya.html",
+      "width": 1280,
+      "lang": "en",
+      "overflow": false
+    },
+    {
+      "file": "cabinet/student.html",
+      "width": 390,
+      "lang": "ru",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "contrasts": []
+}
