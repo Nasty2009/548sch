@@ -1,9 +1,9 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const contact = require('./api/contact');
-const assistant = require('./api/assistant');
-const root = path.join(__dirname, 'site');
+const contact = require('../api/contact');
+const assistant = require('../api/assistant');
+const root = path.join(__dirname, '..', 'site');
 const port = Number(process.env.PORT || 3000);
 const mime = {
   '.html': 'text/html; charset=utf-8',

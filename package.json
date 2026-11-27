@@ -4,7 +4,8 @@
   "private": true,
   "description": "Website for School No. 548 Tsaritsyno",
   "scripts": {
-    "start": "node --env-file-if-exists=.env server.js",
+    "build": "node scripts/check-site.js",
+    "dev": "node --env-file-if-exists=.env scripts/local-server.js",
     "db:init": "psql \"$DATABASE_URL\" -f db/schema.sql",
     "check": "node scripts/check-site.js"
   },

@@ -1,10 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/site/index.html" },
-    { "source": "/assets/:path*", "destination": "/site/assets/:path*" },
-    { "source": "/campuses/:path*", "destination": "/site/campuses/:path*" },
-    { "source": "/:page.html", "destination": "/site/:page.html" }
-  ],
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": "site",
   "headers": [
     {
       "source": "/(.*)",
