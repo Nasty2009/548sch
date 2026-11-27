@@ -1,9 +1,15 @@
 const { Pool } = require('pg');
-const connectionString = process.env.DATABASE_URL;
-const useSsl = connectionString && !/localhost|127\.0\.0\.1/.test(connectionString);
+const rawConnectionString = process.env.DATABASE_URL;
+const useSsl = rawConnectionString && !/localhost|127\.0\.0\.1/.test(rawConnectionString);
+let connectionString = rawConnectionString;
+if (useSsl) {
+  const databaseUrl = new URL(rawConnectionString);
+  databaseUrl.searchParams.delete('sslmode');
+  connectionString = databaseUrl.toString();
+}
 const pool = global.school548Pool || new Pool({
   connectionString,
-  ssl: useSsl ? { rejectUnauthorized: false } : false,
+  ssl: useSsl ? { rejectUnauthorized: true } : false,
   max: 5,
 });
 if (process.env.NODE_ENV !== 'production') global.school548Pool = pool;
